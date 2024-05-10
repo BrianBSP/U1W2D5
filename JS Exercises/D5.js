@@ -61,7 +61,7 @@ const cars = [
   },
 ];
 for (let i = 0; i < cars.length; i++) {
-  cars[i].licensePlate = "aa 123 bb";
+  cars[i].licensePlate = "aa 123 bb"; //non sono riuscito ad attribuire un diverso numero di targa ad ogni oggetto dell'array.
   let targa = cars[i].licensePlate;
 }
 console.log(cars);
