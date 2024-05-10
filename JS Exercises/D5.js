@@ -33,7 +33,10 @@ for (let i = pets.length - 1; 0 <= i; i--) {
 /* ESERCIZIO 4
     Scrivi del codice per spostare il primo elemento dall'array "pets" in ultima posizione.
 */
-
+pets.shift();
+console.log(pets);
+pets.push("cat");
+console.log("Dal primo all'ultimo posto: ", pets);
 /* ESERCIZIO 5
     Dato il seguente array di oggetti, scrivi del codice per aggiungere ad ognuno di essi una proprietà "licensePlate" con valore a tua scelta.
 */
@@ -57,16 +60,34 @@ const cars = [
     trims: ["life", "style", "r-line"],
   },
 ];
-
+for (let i = 0; i < cars.length; i++) {
+  cars[i].licensePlate = "aa 123 bb";
+  let targa = cars[i].licensePlate;
+}
+console.log(cars);
 /* ESERCIZIO 6
     Scrivi del codice per aggiungere un nuovo oggetto in ultima posizione nell'array "cars", rispettando la struttura degli altri elementi.
     Successivamente, rimuovi l'ultimo elemento della proprietà "trims" da ogni auto.
 */
+cars[3] = {
+  brand: "BMW",
+  model: "M3",
+  coloe: "grey",
+  trims: ["MSport", "turbo"],
+  licensePlate: "aa 126 bb",
+};
+console.log("Aggiunto oggetto all'array Cars", cars);
 
+for (let i = 0; i < cars.length; i++) {
+  cars[i].trims.pop();
+}
+console.log("Eliminato ultimo elemento della proprietà trims.", cars);
 /* ESERCIZIO 7
     Scrivi del codice per salvare il primo elemento della proprietà "trims" di ogni auto nel nuovo array "justTrims", sotto definito.
 */
 const justTrims = [];
+
+for (let i = 0; i < cars.length; i++) {}
 
 /* ESERCIZIO 8
     Cicla l'array "cars" e costruisci un if/else statament per mostrare due diversi messaggi in console. Se la prima lettera della proprietà
