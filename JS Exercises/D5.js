@@ -72,7 +72,7 @@ console.log(cars);
 cars[3] = {
   brand: "BMW",
   model: "M3",
-  coloe: "grey",
+  color: "grey",
   trims: ["MSport", "turbo"],
   licensePlate: "aa 126 bb",
 };
@@ -87,23 +87,129 @@ console.log("Eliminato ultimo elemento della proprietà trims.", cars);
 */
 const justTrims = [];
 
-for (let i = 0; i < cars.length; i++) {}
+for (let i = 0; i < cars.length; i++) {
+  justTrims[i] = cars[i].trims[0];
+}
+console.log(justTrims);
 
 /* ESERCIZIO 8
     Cicla l'array "cars" e costruisci un if/else statament per mostrare due diversi messaggi in console. Se la prima lettera della proprietà
     "color" ha valore "b", mostra in console "Fizz". Altrimenti, mostra in console "Buzz".
 */
-
+for (let i = 0; i < cars.length; i++) {
+  if (cars[i].color.charAt(0) === "b") {
+    console.log("Fizz");
+  } else {
+    console.log("Buzz");
+  }
+}
 /* ESERCIZIO 9
     Utilizza un ciclo while per stampare in console i valori del seguente array numerico fino al raggiungimento del numero 32.
 */
 const numericArray = [
-  6, 90, 45, 75, 84, 98, 35, 74, 31, 2, 8, 23, 100, 32, 66, 313, 321, 105,
+  6, 90, 45, 75, 84, 98, 35, 74, 31, 2, 8, 23, 90, 32, 66, 313, 321, 105,
 ];
-
+let i = 0;
+while (i < numericArray.length && numericArray[i] !== 32) {
+  console.log("I numeri dell'array sono: ", numericArray[i]);
+  i++;
+}
 /* ESERCIZIO 10
     Partendo dall'array fornito e utilizzando un costrutto switch, genera un nuovo array composto dalle posizioni di ogni carattere all'interno
-    dell'alfabeto italiano.
+2   dell'alfabeto italiano.
     es. [f, b, e] --> [6, 2, 5]
 */
 const charactersArray = ["g", "n", "u", "z", "d"];
+let alfabeto = [
+  "a",
+  "b",
+  "c",
+  "d",
+  "e",
+  "f",
+  "g",
+  "h",
+  "i",
+  "l",
+  "m",
+  "n",
+  "o",
+  "p",
+  "q",
+  "r",
+  "s",
+  "t",
+  "u",
+  "v",
+  "z",
+];
+let numbers = [];
+for (let i = 0; i < alfabeto.length; i++) {
+  switch (charactersArray[i]) {
+    case "a":
+      numbers.push(1);
+      break;
+    case "b":
+      numbers.push(2);
+      break;
+    case "c":
+      numbers.push(3);
+      break;
+    case "d":
+      numbers.push(4);
+      break;
+    case "e":
+      numbers.push(5);
+      break;
+    case "f":
+      numbers.push(6);
+      break;
+    case "g":
+      numbers.push(7);
+      break;
+    case "h":
+      numbers.push(8);
+      break;
+    case "i":
+      numbers.push(9);
+      break;
+    case "l":
+      numbers.push(10);
+      break;
+    case "m":
+      numbers.push(11);
+      break;
+    case "n":
+      numbers.push(12);
+      break;
+    case "o":
+      numbers.push(13);
+      break;
+    case "p":
+      numbers.push(14);
+      break;
+    case "q":
+      numbers.push(15);
+      break;
+    case "r":
+      numbers.push(16);
+      break;
+    case "s":
+      numbers.push(17);
+      break;
+    case "t":
+      numbers.push(18);
+      break;
+    case "u":
+      numbers.push(19);
+      break;
+    case "v":
+      numbers.push(20);
+      break;
+    case "z":
+      numbers.push(21);
+      break;
+  }
+}
+//console.log(alfabeto);
+console.log("Le lettere richieste sono rispettivamente queste: ", numbers);
